@@ -1,10 +1,19 @@
 {
-  "name": "${PROJECT_NAME}",
+  "name": "to-do-up",
   "version": "1.0.0",
+  "private": true,
   "description": "",
+  "license": "ISC",
+  "author": "",
+  "type": "commonjs",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "scripts": {},
+  "dependencies": {
+    "@types/node": "^25.8.0",
+    "dotenv": "^17.4.2",
+    "typescript": "^6.0.3"
   },
-  "private": true
+  "devDependencies": {
+    "@playwright/test": "^1.60.0"
+  }
 }
