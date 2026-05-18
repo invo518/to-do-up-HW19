@@ -1,11 +1,11 @@
 import {expect, Locator, Page} from "@playwright/test";
 import {ToDoItem} from "../organisms/ToDoItem";
 import {faker} from "@faker-js/faker/locale/en";
-import {Footer} from "./Footers";
+import {Footer} from "./Footer";
 
 export class ToDoPage {
     readonly page: Page;
-    private readonly url = 'https://todo-app.tallinn-learning.ee'
+    readonly url = 'https://todo-app.tallinn-learning.ee'
     readonly header:Locator;
     readonly main:Locator;
     readonly footer:Footer;

@@ -1,18 +1,18 @@
 import { Locator, Page, expect } from "@playwright/test";
 
 export class Footer {
-    readonly root: Locator;
+    readonly filters: Locator;
     readonly allFilter: Locator;
     readonly activeFilter: Locator;
     readonly completedFilter: Locator;
     readonly clearCompletedButton: Locator;
 
     constructor(private page: Page) {
-        this.root = page.getByTestId('footer-navigation');
-        this.allFilter = this.root.locator('["href#/All"]');
-        this.activeFilter = this.root.locator('[href="#/active"]');
-        this.completedFilter = this.root.locator('[href="#/completed"]');
-        this.clearCompletedButton = this.root.getByText('Clear completed');
+        this.filters = page.getByTestId('footer-navigation');
+        this.allFilter = page.locator('[href="#/"]');
+        this.activeFilter = page.locator('[href="#/active"]');
+        this.completedFilter = page.locator('[href="#/completed"]');
+        this.clearCompletedButton = page.locator('.clear-completed');
     }
 
     async clickAll() {
